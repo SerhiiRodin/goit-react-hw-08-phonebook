@@ -25,6 +25,7 @@ const handleFulfilledGet = (state, action) => {
   state.error = null;
 };
 
+
 const handleFulfilledPost = (state, action) => {
   state.isLoading = false;
   state.items.push(action.payload);
