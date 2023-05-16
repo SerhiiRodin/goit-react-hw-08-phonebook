@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getContactsAction } from 'redux/contacts/operations';
 import { ToastContainer } from 'react-toastify';
 
+
 export const App = () => {
   const dispatch = useDispatch();
   const { items, isLoading, error } = useSelector(state => state.contacts);
@@ -30,6 +31,7 @@ export const App = () => {
           <ContactList />
         </>
       )}
+      
       <ToastContainer />
     </div>
   );
