@@ -13,9 +13,13 @@ export const Header = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const user = useSelector(selectUser);
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ backgroundColor: '#26a69a' }}>
       <Container maxWidth="xl">
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <Toolbar
+          sx={{
+            justifyContent: 'space-between',
+          }}
+        >
           <Typography
             variant="h6"
             noWrap
@@ -31,7 +35,7 @@ export const Header = () => {
               textDecoration: 'none',
             }}
           >
-            Names&Numbers
+            Phonebook
           </Typography>
           {!isLoggedIn ? (
             <div>
