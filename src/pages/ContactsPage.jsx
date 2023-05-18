@@ -17,6 +17,7 @@ export const ContactsPage = () => {
           variant="outlined"
           disabled={isContactFormShown}
           onClick={() => setIsContactFormShown(true)}
+          sx={{ color: '#26a69a', borderColor: '#26a69a' }}
         >
           <AddCircleOutlineIcon fontSize="medium" />
           <Typography variant="h5" ml={1}>

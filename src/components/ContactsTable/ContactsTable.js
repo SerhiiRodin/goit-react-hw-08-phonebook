@@ -14,7 +14,7 @@ import {
   TableRow,
   Alert,
 } from '@mui/material';
-import PacmanLoader from 'react-spinners/PacmanLoader';
+import RingLoader from 'react-spinners/RingLoader';
 import { ContactRow } from 'components/ContactRow/ContactRow';
 
 export const ContactsTable = () => {
@@ -33,7 +33,7 @@ export const ContactsTable = () => {
     .sort((p, n) => p.name.localeCompare(n.name));
 
   if (isLoading) {
-    return <PacmanLoader color="#29b6f6" />;
+    return <RingLoader color="#26a69a" size={80} speedMultiplier={2} />;
   }
 
   if (error) {

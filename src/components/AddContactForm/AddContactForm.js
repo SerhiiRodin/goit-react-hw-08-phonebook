@@ -3,6 +3,7 @@ import { addContact } from 'redux/Phonebook/operations';
 import { selectContacts } from 'redux/Phonebook/selectors';
 import { Box, Button, TextField } from '@mui/material';
 import { AddCircleOutline, CloseOutlined } from '@mui/icons-material';
+import Tooltip from '@mui/material/Tooltip';
 
 export const AddContactForm = ({ onClose }) => {
   const dispatch = useDispatch();
@@ -54,12 +55,36 @@ export const AddContactForm = ({ onClose }) => {
         autoComplete="true"
         sx={{ width: '100%' }}
       />
-      <Button type="submit" variant="contained">
-        <AddCircleOutline />
-      </Button>
-      <Button type="button" variant="contained" onClick={onClose}>
-        <CloseOutlined />
-      </Button>
+      <Tooltip title="Add Contact">
+        <Button
+          type="submit"
+          variant="contained"
+          sx={{
+            backgroundColor: '#26a69a',
+            '&:hover': {
+              backgroundColor: '#00796b',
+            },
+          }}
+        >
+          <AddCircleOutline />
+        </Button>
+      </Tooltip>
+
+      <Tooltip title="Hide panel">
+        <Button
+          type="button"
+          variant="contained"
+          onClick={onClose}
+          sx={{
+            backgroundColor: '#26a69a',
+            '&:hover': {
+              backgroundColor: '#00796b',
+            },
+          }}
+        >
+          <CloseOutlined />
+        </Button>
+      </Tooltip>
     </Box>
   );
 };

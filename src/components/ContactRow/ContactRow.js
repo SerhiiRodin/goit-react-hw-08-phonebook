@@ -1,4 +1,5 @@
 import { Button, TableCell, TableRow } from '@mui/material';
+import Tooltip from '@mui/material/Tooltip';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/Phonebook/operations';
@@ -16,7 +17,9 @@ export const ContactRow = ({ contact: { id, name, number } }) => {
       <TableCell align="right">
         <Button onClick={() => dispatch(deleteContact(id))}>
           <div>
-            <DeleteIcon fontSize="medium" />
+            <Tooltip title="Delete">
+              <DeleteIcon fontSize="medium" sx={{ color: '#26a69a' }} />
+            </Tooltip>
           </div>
         </Button>
       </TableCell>

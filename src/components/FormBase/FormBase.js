@@ -39,7 +39,17 @@ export const FormBase = ({ fields, title, onSubmit, btnLabel = 'Submit' }) => {
           sx={{ width: '100%' }}
         />
       ))}
-      <Button type="submit" variant="contained" sx={{ minWidth: '150px' }}>
+      <Button
+        type="submit"
+        variant="contained"
+        sx={{
+          minWidth: '150px',
+          backgroundColor: '#26a69a',
+          '&:hover': {
+            backgroundColor: '#00796b',
+          },
+        }}
+      >
         {btnLabel}
       </Button>
     </Box>
