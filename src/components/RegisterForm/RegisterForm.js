@@ -31,7 +31,7 @@ export const RegisterForm = () => {
     >
       <FormBase
         fields={registerFormFields}
-        title="Join our service!"
+        title="Enter the data for the registration."
         onSubmit={handleSubmit}
         btnLabel="Register"
       />
